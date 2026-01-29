@@ -22,9 +22,9 @@ const Header = () => {
                         <li><Link to="/">{t.nav.home}</Link></li>
                         <li><Link to="/videos">{t.nav.videos}</Link></li>
                         <li><Link to="/musica">{t.nav.musica}</Link></li>
-                        <li><a href="/#world">{t.nav.world}</a></li>
-                        <li><a href="/#tech">{t.nav.tech}</a></li>
-                        <li><a href="/#business">{t.nav.business}</a></li>
+                        <li><Link to="/mundus">{t.nav.world}</Link></li>
+                        <li><Link to="/tech">{t.nav.tech}</Link></li>
+                        <li><Link to="/business">{t.nav.business}</Link></li>
                     </ul>
                 </nav>
 
@@ -72,9 +72,9 @@ const Header = () => {
                         <li><Link to="/" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</Link></li>
                         <li><Link to="/videos" onClick={() => setIsMenuOpen(false)}>{t.nav.videos}</Link></li>
                         <li><Link to="/musica" onClick={() => setIsMenuOpen(false)}>{t.nav.musica}</Link></li>
-                        <li><a href="/#world" onClick={() => setIsMenuOpen(false)}>{t.nav.world}</a></li>
-                        <li><a href="/#tech" onClick={() => setIsMenuOpen(false)}>{t.nav.tech}</a></li>
-                        <li><a href="/#business" onClick={() => setIsMenuOpen(false)}>{t.nav.business}</a></li>
+                        <li><Link to="/mundus" onClick={() => setIsMenuOpen(false)}>{t.nav.world}</Link></li>
+                        <li><Link to="/tech" onClick={() => setIsMenuOpen(false)}>{t.nav.tech}</Link></li>
+                        <li><Link to="/business" onClick={() => setIsMenuOpen(false)}>{t.nav.business}</Link></li>
                     </ul>
                 </nav>
             )}
