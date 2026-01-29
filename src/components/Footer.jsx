@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} NVNTIVM. {t.footer.rights}</p>
-                    <a href="/Nuntium/hola.php" style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem', display: 'block' }}>PHP Greeting</a>
+                    <a href="/Nuntium/hola.html" style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem', display: 'block' }}>PHP/HTML Greeting</a>
                 </div>
             </div>
         </footer>
