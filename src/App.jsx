@@ -8,7 +8,7 @@ import MusicaPage from './pages/MusicaPage';
 function App() {
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename="/Nuntium">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/videos" element={<VideosPage />} />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Globe, Menu, X } from 'lucide-react';
 import './Header.css';
 
@@ -12,16 +13,18 @@ const Header = () => {
         <header className="header glass-panel">
             <div className="container header-content">
                 <div className="logo">
-                    <h1>NVNTIVM</h1>
+                    <h1><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>NVNTIVM</Link></h1>
                 </div>
 
                 {/* Desktop Nav */}
                 <nav className="desktop-nav">
                     <ul>
-                        <li><a href="#home">{t.nav.home}</a></li>
-                        <li><a href="#world">{t.nav.world}</a></li>
-                        <li><a href="#tech">{t.nav.tech}</a></li>
-                        <li><a href="#business">{t.nav.business}</a></li>
+                        <li><Link to="/">{t.nav.home}</Link></li>
+                        <li><Link to="/videos">{t.nav.videos}</Link></li>
+                        <li><Link to="/musica">{t.nav.musica}</Link></li>
+                        <li><a href="/#world">{t.nav.world}</a></li>
+                        <li><a href="/#tech">{t.nav.tech}</a></li>
+                        <li><a href="/#business">{t.nav.business}</a></li>
                     </ul>
                 </nav>
 
@@ -66,10 +69,12 @@ const Header = () => {
             {isMenuOpen && (
                 <nav className="mobile-nav glass-panel">
                     <ul>
-                        <li><a href="#home" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</a></li>
-                        <li><a href="#world" onClick={() => setIsMenuOpen(false)}>{t.nav.world}</a></li>
-                        <li><a href="#tech" onClick={() => setIsMenuOpen(false)}>{t.nav.tech}</a></li>
-                        <li><a href="#business" onClick={() => setIsMenuOpen(false)}>{t.nav.business}</a></li>
+                        <li><Link to="/" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</Link></li>
+                        <li><Link to="/videos" onClick={() => setIsMenuOpen(false)}>{t.nav.videos}</Link></li>
+                        <li><Link to="/musica" onClick={() => setIsMenuOpen(false)}>{t.nav.musica}</Link></li>
+                        <li><a href="/#world" onClick={() => setIsMenuOpen(false)}>{t.nav.world}</a></li>
+                        <li><a href="/#tech" onClick={() => setIsMenuOpen(false)}>{t.nav.tech}</a></li>
+                        <li><a href="/#business" onClick={() => setIsMenuOpen(false)}>{t.nav.business}</a></li>
                     </ul>
                 </nav>
             )}
