@@ -1,0 +1,103 @@
+.subs-section {
+    padding: 6rem 1rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.subs-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.subs-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subs-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.plans-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Center vertically for the featured bump */
+}
+
+.plan-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    padding: 2.5rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.plan-card.featured {
+    transform: scale(1.05);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #000;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 2rem;
+}
+
+.plan-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.plan-header .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.plan-header .price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+.plan-features {
+    margin-bottom: 2.5rem;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.feature-icon {
+    color: var(--accent);
+}
+
+.plan-btn {
+    width: 100%;
+}

@@ -1,0 +1,18 @@
+.amposta-section {
+    padding: 4rem 1rem;
+}
+
+.amposta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.amposta-card {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.amposta-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
