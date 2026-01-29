@@ -10,12 +10,6 @@ export const translations = {
       amposta: "Amposta",
       subscribe: "Subscribere",
     },
-    roulette: {
-      title: "Fortuna Rota",
-      desc: "Tenta fortunam tuam...",
-      spin: "Vertere",
-      win: "Fortuna Tibi Est!",
-    },
     hero: {
       readMore: "Legere Plus",
       trending: "Inclinatio",
@@ -60,12 +54,6 @@ export const translations = {
       musica: "Música",
       amposta: "Amposta",
       subscribe: "Subscriu-te",
-    },
-    roulette: {
-      title: "Ruleta de la Fortuna",
-      desc: "Prova la teva sort...",
-      spin: "Girar",
-      win: "Tens Sort!",
     },
     hero: {
       readMore: "Llegir Més",
@@ -112,12 +100,6 @@ export const translations = {
       amposta: "Amposta",
       subscribe: "Suscribirse",
     },
-    roulette: {
-      title: "Ruleta de la Fortuna",
-      desc: "Prueba tu suerte...",
-      spin: "Girar",
-      win: "¡Tienes Suerte!",
-    },
     hero: {
       readMore: "Leer Más",
       trending: "Tendencia",
@@ -162,12 +144,6 @@ export const translations = {
       musica: "Music",
       amposta: "Amposta",
       subscribe: "Subscribe",
-    },
-    roulette: {
-      title: "Wheel of Fortune",
-      desc: "Test your luck...",
-      spin: "Spin",
-      win: "You're Lucky!",
     },
     hero: {
       readMore: "Read More",
