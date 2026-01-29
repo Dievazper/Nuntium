@@ -14,8 +14,10 @@ const Footer = () => {
             marginTop: 'auto'
         }}>
             <div className="container">
-                <h3>NVNTIVM</h3>
-                <p style={{ margin: '1rem 0' }}>{t.footer.rights} © {year}</p>
+                <div className="footer-bottom">
+                    <p>&copy; {new Date().getFullYear()} NVNTIVM. {t.footer.rights}</p>
+                    <a href="/Nuntium/hola.php" style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem', display: 'block' }}>PHP File</a>
+                </div>
             </div>
         </footer>
     );
