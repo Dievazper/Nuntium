@@ -1,7 +1,27 @@
+import React, { useState, useEffect } from 'react';
 
-import React from 'react';
+const VIDEO_DATA = [
+    { id: 'CjG20ZtXz28', title: 'Coral Reef Dance', desc: 'Graceful dolphins in their natural coral habitat.' },
+    { id: '8V9a9qTjqBw', title: 'Deep Blue Serenity', desc: 'Relaxing 4K footage of intelligent marine life.' },
+    { id: 'p9tTFaT2tYs', title: 'Ocean Sounds', desc: 'Complete immersion with underwater sounds.' },
+    { id: 'GAoUpNnO02k', title: 'Free Swimming', desc: 'Dolphins swimming free in the open ocean.' },
+    { id: 'Wf9_Gitcils', title: 'Rich German Footage', desc: 'Spectacular close encounters.' },
+    { id: '-hXTYe58g34', title: 'Pacific Encounters', desc: 'Spinner dolphins in the Pacific.' },
+    { id: 'x1GY-97cKaI', title: 'Whale Songs', desc: 'Deep underwater songs and visuals.' },
+    { id: 'A3XlrL__c_0', title: 'Harmony of Peace', desc: 'Relaxing music for inner peace.' },
+    { id: 'rCVy8E2xFLg', title: 'Summer Boat Ride', desc: 'Calm ocean vibes for relaxation.' },
+    { id: '2Hamsi8r3QA', title: 'Tropical Paradise', desc: 'Crystal clear waters and marine life.' },
+];
 
 const VideosPage = () => {
+    const [displayedVideos, setDisplayedVideos] = useState([]);
+
+    useEffect(() => {
+        // Randomize videos on mount
+        const shuffled = [...VIDEO_DATA].sort(() => 0.5 - Math.random());
+        setDisplayedVideos(shuffled.slice(0, 6)); // Show 6 random videos
+    }, []);
+
     const styles = {
         container: {
             backgroundColor: '#006994', // Ocean blue
@@ -85,56 +105,23 @@ const VideosPage = () => {
             </header>
 
             <div style={styles.grid}>
-                {/* Video 1 */}
-                <div style={styles.card}>
-                    <div style={styles.videoWrapper}>
-                        <iframe
-                            style={styles.iframe}
-                            src="https://www.youtube.com/embed/CjG20ZtXz28"
-                            title="Dolphin Relaxation"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+                {displayedVideos.map((video) => (
+                    <div style={styles.card} key={video.id}>
+                        <div style={styles.videoWrapper}>
+                            <iframe
+                                style={styles.iframe}
+                                src={`https://www.youtube.com/embed/${video.id}`}
+                                title={video.title}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                        <div style={styles.cardContent}>
+                            <h3 style={styles.cardTitle}>{video.title}</h3>
+                            <p style={styles.cardText}>{video.desc}</p>
+                        </div>
                     </div>
-                    <div style={styles.cardContent}>
-                        <h3 style={styles.cardTitle}>Coral Reef Dance</h3>
-                        <p style={styles.cardText}>Witness the grace of dolphins in their natural coral habitat.</p>
-                    </div>
-                </div>
-
-                {/* Video 2 */}
-                <div style={styles.card}>
-                    <div style={styles.videoWrapper}>
-                        <iframe
-                            style={styles.iframe}
-                            src="https://www.youtube.com/embed/8V9a9qTjqBw"
-                            title="Dolphins 4K"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                    <div style={styles.cardContent}>
-                        <h3 style={styles.cardTitle}>Deep Blue Serenity</h3>
-                        <p style={styles.cardText}>relaxing 4K footage of the ocean's most intelligent mammals.</p>
-                    </div>
-                </div>
-
-                {/* Video 3 */}
-                <div style={styles.card}>
-                    <div style={styles.videoWrapper}>
-                        <iframe
-                            style={styles.iframe}
-                            src="https://www.youtube.com/embed/p9tTFaT2tYs"
-                            title="Ocean Sounds"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                    <div style={styles.cardContent}>
-                        <h3 style={styles.cardTitle}>Sounds of the Sea</h3>
-                        <p style={styles.cardText}>Complete immersion with underwater sounds and visuals.</p>
-                    </div>
-                </div>
+                ))}
             </div>
 
             <div style={{ textAlign: 'center' }}>
